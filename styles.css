@@ -1,0 +1,138 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* --------------- Layout ------------- */
+
+.color-drop-contaniner,
+.color-header-container,
+.color-section-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* The container that contains: color-picker, select menu, send button */
+.color-header-container {
+    align-items: center;
+    gap:20px;
+    min-width: 250px;
+    padding: 50px 20px;
+
+}
+
+/* The container that contains: color-picker & hexcode */
+.color-drop-contaniner { 
+    font-weight: 600;
+}
+
+/* The section that is populated with the color div  from the Color API */
+.color-section-and-hexcode {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 70vw;
+    max-width: 600px;
+    height: 60vh;
+    cursor: pointer;
+}
+
+/* Section that contains the color and the hexcode from the Color API */
+.color-section-container {
+    flex:20px 1;
+}
+
+.color-section {
+    height: 100%;
+}
+
+.hexcode-section {
+    background-color: white;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+    font-weight: 600;
+}
+
+
+/* --------------- Inputs, Select menu, Send Btn------------- */
+
+.color-picker {
+    border: none;
+    width: 100px;
+    height: 50px;
+}
+
+/* Send Color Info Btn */
+.send-color-info {
+    background-color: white;
+}
+
+.color-picker, 
+.color-menu,
+.send-color-info {
+    cursor: pointer;
+}
+
+.color-menu,
+.send-color-info {
+    width: 312px;
+    height: 45px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid rgb(57, 54, 54);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    padding: 9px 13px;
+}
+
+/* --------------- Hover & Active effects------------- */
+.color-menu:hover,
+.color-menu:active,
+.send-color-info:hover,
+.send-color-info:active 
+{
+    background-color: rgb(230, 227, 227);
+}
+
+.send-color-info:hover,
+.send-color-info:active
+{
+    transform: scale(1.05);
+}
+
+.color-section-container:hover,
+.color-section-container:active
+{
+    transform: scale(1.02);
+}
+
+/* --------------- Typography ------------- */
+
+/* The hex value text displayed under each color from the Scheme color */
+#color-value {
+    text-align: center;
+    margin: 0;
+    margin-top: 12px;
+    font-size: 18px;
+}
+
+
+.placeholder-text {
+    font-size: 40px;
+    text-align: center;
+    flex-grow: 2;
+}
+
+
+/* --------------- Media Queries ------------- */
+@media (min-width:1024px) {
+    .color-header-container {
+        padding: 30px 20px;
+    }
+}
