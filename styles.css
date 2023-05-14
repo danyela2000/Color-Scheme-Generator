@@ -44,6 +44,7 @@ html, body{
 /* Section that contains the color and the hexcode from the Color API */
 .color-section-container {
     flex:20px 1;
+    transition: all 0.4s ease-in-out;
 }
 
 .color-section {
